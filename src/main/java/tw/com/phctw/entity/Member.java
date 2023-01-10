@@ -2,13 +2,15 @@ package tw.com.phctw.entity;
 
 import java.sql.Date;
 
+import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+import org.springframework.stereotype.Component;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-
+@Component
 @DynamicInsert
 @DynamicUpdate
 @Entity
