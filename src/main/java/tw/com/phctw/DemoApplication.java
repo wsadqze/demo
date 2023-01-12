@@ -9,14 +9,15 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import tw.com.phctw.entity.Member;
 import tw.com.phctw.service.MemberService;
-
-@ComponentScan(basePackages = { "tw.com.phctw.service", "tw.com.phctw.dao", "tw.com.phctw.entity" })
+@SpringBootApplication
+@ComponentScan(basePackages = { "tw.com.phctw.service", "tw.com.phctw.dao", "tw.com.phctw.entity", "tw.com.phctw.controller" })
 @EntityScan("tw.com.phctw.entity")
 @EnableJpaRepositories("tw.com.phctw.dao")
-@SpringBootApplication
+
 public class DemoApplication {
 
 	public static void main(String[] args) throws ParseException {
@@ -26,8 +27,8 @@ public class DemoApplication {
 
 		MemberService memberService = context.getBean(MemberService.class);
 
-        Member member = memberService.get("a06");
-        System.out.println(member);
+//        Member member = memberService.get("a06");
+//        System.out.println(member);
         
         
 //		String new_pw = memberService.changePw("q");
@@ -57,8 +58,12 @@ public class DemoApplication {
 //		System.out.println(member);
 //		member = memberService.addMember(member);
 //		System.out.println(member);
-		
         
+        
+        
+      
+        
+
 	}
 
 }
